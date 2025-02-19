@@ -1,0 +1,100 @@
+/* Стили для игрового стола */
+#game-table {
+  margin: 20px auto;
+  width: 400px; /* Увеличим ширину стола */
+  height: 200px;
+  background-color: green; /* Зелёный фон стола */
+  border: 2px solid #006400;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#table-cards {
+  display: flex; /* Расположение карт в одну строку */
+  gap: 10px; /* Пространство между картами */
+}
+
+/* Анимация полёта карты */
+.card.flying {
+  animation: flyToTable 1s ease-out;
+  position: absolute;
+}
+
+@keyframes flyToTable {
+  from {
+    transform: translateY(-100px); /* Карта начинает движение сверху */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* Карта приземляется на стол */
+    opacity: 1;
+  }
+}
+
+/* Стили для карт */
+.card {
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.card img {
+  width: 80px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.card.selected {
+  border: 2px solid green;
+}
+
+/* Стили для общего интерфейса */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f73;
+}
+
+#cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}

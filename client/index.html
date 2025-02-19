@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карточная игра</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Карточная игра</h1>
+    <button id="start-button">Начать игру</button>
+
+    <!-- Игровой стол -->
+    <div id="game-table">
+      <div id="table-cards"></div> <!-- Блок для отображения карт на столе -->
+    </div>
+
+    <!-- Игроки и их карты -->
+    <div id="player-cards">
+      <div><strong>Ваши карты:</strong></div>
+      <div id="cards-container"></div> <!-- Блок для отображения карт игрока -->
+    </div>
+
+    <button id="play-card-button" disabled>Сделать ход</button>
+    <div id="result"></div> <!-- Блок для отображения результата -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
